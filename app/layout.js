@@ -1,4 +1,3 @@
-import localFont from "next/font/local";
 import "./globals.css";
 import { AuthProvider } from "../context/AuthContext";
 import Navbar from "../components/Navbar";
@@ -15,9 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
-			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-			>
+			<body className={`dark antialiased`}>
 				<AuthProvider>
 					<Navbar />
 					<main className="container mx-auto px-5">{children}</main>
