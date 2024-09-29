@@ -1,6 +1,7 @@
 import "./globals.css";
 import { AuthProvider } from "../context/AuthContext";
 import Navbar from "../components/Navbar";
+import Head from "next/head";
 
 export const metadata = {
 	title: "IT414 - Web Vulnerabilities",
@@ -14,6 +15,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
+			<Head>
+				<link
+					rel="icon"
+					href="/favicon.png"
+				/>
+			</Head>
 			<body className={`dark antialiased`}>
 				<AuthProvider>
 					<Navbar />
