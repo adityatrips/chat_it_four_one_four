@@ -1,5 +1,5 @@
-import Message from "@/models/Message";
-import connectDB from "@/config/db";
+import Message from "../../../models/Message";
+import connectDB from "../../../config/db";
 
 export const GET = async (req, res) => {
 	await connectDB();
