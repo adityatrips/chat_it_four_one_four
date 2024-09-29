@@ -1,28 +1,28 @@
 "use client";
 
 import { useState } from "react";
+import { useAuth } from "@/context/AuthContext";
 import {
 	Card,
-	CardHeader,
-	CardFooter,
-	CardTitle,
 	CardContent,
+	CardFooter,
+	CardHeader,
+	CardTitle,
 } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
-import { useAuth } from "@/context/AuthContext";
 
-const Login = () => {
+const Signup = () => {
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
-	const { login } = useAuth();
+	const { signup } = useAuth();
 
 	return (
 		<div className="flex flex-col min-h-[calc(100vh-6rem)] justify-center">
 			<Card>
 				<CardHeader>
 					<CardTitle className="text-2xl text-center">
-						Already a user? Welcome back! 👉🏻👈🏻
+						Not a user? Get on-board 🚀
 					</CardTitle>
 				</CardHeader>
 				<CardContent className="flex flex-col gap-2">
@@ -44,9 +44,9 @@ const Login = () => {
 				<CardFooter>
 					<Button
 						className="w-full"
-						onClick={() => login(username, password)}
+						onClick={() => signup(username, password)}
 					>
-						Login
+						Signup
 					</Button>
 				</CardFooter>
 			</Card>
@@ -54,4 +54,4 @@ const Login = () => {
 	);
 };
 
-export default Login;
+export default Signup;
