@@ -1,9 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useAuth } from "@/context/AuthContext";
+import { Button } from "../../components/ui/button";
+import { Input } from "../../components/ui/input";
+import { useAuth } from "../../context/AuthContext";
 import { useRouter } from "next/navigation";
 
 const Chat = () => {
@@ -33,6 +33,7 @@ const Chat = () => {
 		};
 
 		fetchMessages();
+		// eslint-disable-next-line
 	}, []);
 
 	const handleSendMessage = async (e) => {
