@@ -18,7 +18,7 @@ const Login = () => {
 	const { login } = useAuth();
 
 	return (
-		<div className="flex flex-col min-h-[calc(100vh-6rem)] justify-center">
+		<div className="flex flex-col min-h-[calc(100vh-6rem)] justify-center max-w-96 mx-auto">
 			<Card>
 				<CardHeader>
 					<CardTitle className="text-2xl text-center">
@@ -41,7 +41,7 @@ const Login = () => {
 						required
 					/>
 				</CardContent>
-				<CardFooter>
+				<CardFooter className="border-t pt-6">
 					<Button
 						className="w-full"
 						onClick={() => login(username, password)}

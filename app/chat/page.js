@@ -57,9 +57,10 @@ const Chat = () => {
 				{messages.map((msg, index) => (
 					<div
 						key={index}
-						className="p-2 bg-gray-200 rounded mb-2"
+						className="flex flex-col md:flex-row border rounded mb-2"
 					>
-						<strong>{msg.username}:</strong> {msg.message}
+						<div className="py-2 px-5 bg-secondary">{msg.username}</div>
+						<div className="py-2 px-5">{msg.message}</div>
 					</div>
 				))}
 			</div>
